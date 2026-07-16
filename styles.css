@@ -74,10 +74,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: inter;
 }
 
-.main-container {
-    background-color: #127475;
 
-}
 
 .announcements-container {
     background-color: #127475;
@@ -96,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .subtitle-text-big {
     font-weight: bolder;
-    font-size: 2.8rem;
+    font-size: clamp(1rem, 2.8rem, 3rem);
 }
 
 
@@ -111,9 +108,72 @@ h1, h2, h3, h4, h5, h6 {
     grid-row: span 2;
     box-shadow: 10px 0px 8px #64605a85;
     position: relative;
-    padding: ;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 }
 
+.sidebar-title {
+    position: relative;
+    margin-left: 60px;
+    align-self: center;
+}
+
+.sidebar-title::before {
+    background-image: url(images/sheep.svg);
+    height: 90px;
+    width: 90px;
+    left: -94px;
+    top: -15px;
+    position: absolute;
+    content: "";
+}
+.sidebar-container ul li {
+    font-size: 1.8rem;
+    list-style-type: none;
+    line-height: 3.9rem;
+    position: relative;
+    margin-left: 60px;
+    font-weight: 500;
+}
+
+.list-icon::before {
+    position: absolute;
+    content: "";
+    left: -5rem;    
+    top: 0.5rem;
+    height: 45px;
+    width: 45px;
+}
+
+.list-icon-1::before {
+    background-image: url(images/home-variant-outline.svg);
+}
+.list-icon-2::before {
+    background-image: url(images/account-outline.svg);
+}
+.list-icon-3::before {
+    background-image: url(images/message-outline.svg);
+}
+.list-icon-4::before {
+    background-image: url(images/history.svg);
+}
+.list-icon-5::before {
+    background-image: url(images/clipboard-list-outline.svg);
+}
+.list-icon-6::before {
+    background-image: url(images/account-group-outline.svg);
+}
+.list-icon-7::before {
+    background-image: url(images/cog-outline.svg);
+}
+.list-icon-8::before {
+    background-image: url(images/comment-question-outline.svg);
+}
+.list-icon-9::before {
+    background-image: url(images/eye-off-outline.svg);
+}
 
 /* Header div */
 
@@ -123,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
     align-items: center;
-    padding: 10px 50px;
+    padding: 0px 50px 30px 50px;
     align-items: center;
     position: relative;
     box-shadow: 5px 4px 8px #044444bd;
@@ -214,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     border-radius: 200px;
     padding: 10px 40px;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.5rem;
 }
 
@@ -225,3 +285,50 @@ h1, h2, h3, h4, h5, h6 {
 .account-greeting-div, .account-buttons-div {
     margin-top: 10px;
 }
+
+/* Main container div */
+
+.main-container {
+    background-color: #127475;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+    padding: 160px 50px;
+    position: relative;
+}
+
+.main-container::before {
+    content: "Your Projects";
+    position: absolute;
+    font-size: 1.8rem;
+    font-family: Roboto Mono;
+    top: 5.1rem;
+    left: 4rem;
+    font-weight: bold;
+}
+
+.card {
+    min-height: 200px;
+    background-color: #0E9594;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    box-shadow: -6px 0 #F2542D;
+}
+
+.card-content {
+    font-size: 1.2rem;
+}
+
+.card-icons-div {
+    display: flex;
+    gap: 25px;
+    justify-content: end;
+    padding: 5px 15px;
+}
+
+.card-icons-div img {
+    height: 25px;
+    width: 25px;
+}
+
