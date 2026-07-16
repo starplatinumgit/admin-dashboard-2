@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
     display: grid;
-    grid-template: 3fr 7fr / 2fr 8fr 3fr;
+    grid-template: 1fr max-content / 2fr 8fr 3fr;
     font-family: inter;
 }
 
@@ -87,19 +87,19 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .icon {
-    height: 45px;
-    width: 45px;
+    height: 25px;
+    width: 25px;
 }
 
 .subtitle-text {
     justify-self: start;
-    font-size: 2.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .subtitle-text-big {
     font-weight: bolder;
-    font-size: clamp(1rem, 2.8rem, 3rem);
+    font-size: clamp(1rem, 1.4rem, 3rem);
 }
 
 
@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
     align-items: center;
-    padding: 0px 50px 30px 50px;
+    padding: 0px 50px 20px 50px;
     align-items: center;
     position: relative;
     box-shadow: 5px 4px 8px rgba(255, 255, 255, 0.089);
@@ -202,9 +202,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .search-bar {
     background-color: var(--main-grey);
-    width: 95%;
+    width: 75%;
     margin-left: 40px;
-    height: 50px;
+    height: 30px;
     border-radius: 40px;
     position: relative;
 }
@@ -212,10 +212,10 @@ h1, h2, h3, h4, h5, h6 {
 .search-bar::before{
     content: "";
     background-image: url(images/magnify.svg);
-    height: 45px;
-    width: 45px;
+    height: 25px;
+    width: 25px;
     position: absolute;
-    left: -65px;
+    left: -45px;
     top: 4px;
 }
 
@@ -231,8 +231,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cat-icon {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     justify-self: center;
 }
 
@@ -248,14 +248,14 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: 1fr 8fr;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
 }
 
 .cat-icon-big {
-    min-height: 120px;
-    min-width: 120px;
-    max-height: 120px;
-    max-width: 120px;
+    min-height: 70px;
+    min-width: 70px;
+    max-height: 70px;
+    max-width: 70px;
     justify-self: end;
 }
 
@@ -269,14 +269,14 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     content: "Hi there,";
     top: -1.3rem;
-    font-size: 1.2rem;
-    left: 3px;
+    font-size: 1.1rem;
+    left: 1.2px;
 }
 
 .account-buttons-div {
     display: flex;
     justify-content: center;
-    gap: 45px;
+    gap: 20px;
     
 }
 
@@ -284,9 +284,9 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--sidebar-blue);
     border: none;
     border-radius: 200px;
-    padding: 10px 40px;
     font-weight: 500;
-    font-size: 1.5rem;
+    padding: 5px 20px;
+    font-size: 1rem;
     color: white;
 }
 
@@ -303,10 +303,10 @@ h1, h2, h3, h4, h5, h6 {
 .main-container {
     background-color: var(--main-grey);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 2rem;
     position: relative;
-    padding: 160px 25px 160px 50px;    
+    padding: 60px 15px 60px 40px;    
 }
 
 .main-container::before {
@@ -320,16 +320,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card {
-    min-height: 200px;
+    height: clamp(200px, 200px, 250px);
     background-color: var(--header-white);
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 40px 0px 40px;
     position: relative;
     box-shadow: -6px 0 #29274C;
 }
 
 .card-content {
-    font-size: 1.6rem;
+    font-size: 1rem;
     padding: 20px 0px;
 }
 
@@ -337,7 +337,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 25px;
     justify-content: end;
-    padding: 5px 15px;
+    padding: 0px 15px;
 }
 
 .card-icons-div img {
@@ -349,17 +349,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .announcements-container {
     background-color: var(--main-grey);
-    padding: 160px 50px 160px 50px;    
     font-family: inter;
     position: relative;
+    padding: 60px 40px 60px 15px;    
 }
 
 .announcements-div {
     display: grid;
     grid-template-rows: 1fr max-content 1fr max-content 1fr; 
     background: var(--header-white);
-    padding: 40px 60px;
-    gap: 30px;
+    padding: 20px 30px;
+    gap: 10px;
     border-radius: 20px;
 }
 
@@ -370,19 +370,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .announcements-paragraph p {
-    color: var;
+    font-size: 0.8rem;
 }
 
 hr {
     border: 1px solid #c9bbbba8;
 }
 
+.announcements-paragraph h3 {
+    font-size: 0.9rem;
+}
+
 .announcements-container::before {
     content: "Announcements";
     position: absolute;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-family: Roboto Mono;
-    top: 5.1rem;
-    left: 4rem;
+    top: 1rem;
+    left: 1.5rem;
     font-weight: bold;
 }
