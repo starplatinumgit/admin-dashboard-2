@@ -84,9 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-.announcements-container {
-    background-color: var(--main-grey);
-}
+
 
 .icon {
     height: 45px;
@@ -95,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .subtitle-text {
     justify-self: start;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     font-weight: bold;
 }
 
@@ -331,7 +329,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-content {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    padding: 20px 0px;
 }
 
 .card-icons-div {
@@ -346,3 +345,15 @@ h1, h2, h3, h4, h5, h6 {
     width: 25px;
 }
 
+/* Announcements countainer */
+
+.announcements-container {
+    background-color: var(--main-grey);
+}
+
+.announcements-div {
+    background: var(--header-white);
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+}
