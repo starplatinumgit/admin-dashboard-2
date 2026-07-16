@@ -53,6 +53,14 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+:root {
+    --header-white: #FFFFFF;
+    --main-grey: #F1F1F1;
+    --darker-grey: #DDDDDD;
+    --sidebar-blue: #29274C ;
+    --fern: #628B48;
+}
+
 .roboto-mono {
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
@@ -70,14 +78,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
     display: grid;
-    grid-template: 3fr 7fr / 1fr 4fr 1fr;
+    grid-template: 3fr 7fr / 2fr 8fr 3fr;
     font-family: inter;
 }
 
 
 
 .announcements-container {
-    background-color: #127475;
+    background-color: var(--main-grey);
 }
 
 .icon {
@@ -104,14 +112,16 @@ h1, h2, h3, h4, h5, h6 {
 /* Sidebar div */
 
 .sidebar-container {
-    background-color: #F5DFBB;
+    background-color: var(--sidebar-blue);
+    color: white;
     grid-row: span 2;
-    box-shadow: 10px 0px 8px #64605a85;
+    box-shadow: 4px 0px 4px hsla(243, 44%, 64%, 0.412);
     position: relative;
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
     gap: 80px;
+    z-index: 2;
 }
 
 .sidebar-title {
@@ -128,6 +138,7 @@ h1, h2, h3, h4, h5, h6 {
     top: -15px;
     position: absolute;
     content: "";
+    filter: invert(100%);
 }
 .sidebar-container ul li {
     font-size: 1.8rem;
@@ -145,6 +156,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0.5rem;
     height: 45px;
     width: 45px;
+    filter: invert(100%);
 }
 
 .list-icon-1::before {
@@ -178,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Header div */
 
 .header-container {
-    background-color: #0E9594;
+    background-color: var(--header-white);
     grid-column: span 2;
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
@@ -186,11 +198,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0px 50px 30px 50px;
     align-items: center;
     position: relative;
-    box-shadow: 5px 4px 8px #044444bd;
+    box-shadow: 5px 4px 8px rgba(255, 255, 255, 0.089);
+    z-index: 3;
 }
 
 .search-bar {
-    background-color: rgba(255, 255, 255, 0.288);
+    background-color: var(--main-grey);
     width: 95%;
     margin-left: 40px;
     height: 50px;
@@ -270,12 +283,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .account-button {
-    background-color: #F5DFBB;
+    background-color: var(--sidebar-blue);
     border: none;
     border-radius: 200px;
     padding: 10px 40px;
     font-weight: 500;
     font-size: 1.5rem;
+    color: white;
 }
 
 .account-button:hover {
@@ -289,7 +303,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Main container div */
 
 .main-container {
-    background-color: #127475;
+    background-color: var(--main-grey);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 2rem;
@@ -309,11 +323,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .card {
     min-height: 200px;
-    background-color: #0E9594;
+    background-color: var(--header-white);
     border-radius: 20px;
     padding: 20px;
     position: relative;
-    box-shadow: -6px 0 #F2542D;
+    box-shadow: -6px 0 #29274C;
 }
 
 .card-content {
