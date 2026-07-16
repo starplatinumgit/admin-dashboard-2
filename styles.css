@@ -305,8 +305,8 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 2rem;
-    padding: 160px 50px;
     position: relative;
+    padding: 160px 25px 160px 50px;    
 }
 
 .main-container::before {
@@ -349,11 +349,40 @@ h1, h2, h3, h4, h5, h6 {
 
 .announcements-container {
     background-color: var(--main-grey);
+    padding: 160px 50px 160px 50px;    
+    font-family: inter;
+    position: relative;
 }
 
 .announcements-div {
-    background: var(--header-white);
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-rows: 1fr max-content 1fr max-content 1fr; 
+    background: var(--header-white);
+    padding: 40px 60px;
+    gap: 30px;
+    border-radius: 20px;
+}
+
+.announcements-paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.announcements-paragraph p {
+    color: var;
+}
+
+hr {
+    border: 1px solid #c9bbbba8;
+}
+
+.announcements-container::before {
+    content: "Announcements";
+    position: absolute;
+    font-size: 1.8rem;
+    font-family: Roboto Mono;
+    top: 5.1rem;
+    left: 4rem;
+    font-weight: bold;
 }
