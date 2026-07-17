@@ -145,6 +145,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
+.sidebar-container ul li:hover {
+    font-style: italic;
+    cursor: pointer;
+}
+
 .list-icon::before {
     position: absolute;
     content: "";
@@ -323,7 +328,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 20px;
     padding: 20px 40px 0px 40px;
     position: relative;
-    box-shadow: -6px 0 #29274C;
+    box-shadow: -6px 0 #29274C, 2px 2px 10px #cac5c5;
 }
 
 .card-content {
@@ -359,6 +364,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 30px;
     gap: 10px;
     border-radius: 20px;
+    box-shadow: 2px 2px 10px #cac5c5;
 }
 
 .announcements-paragraph {
