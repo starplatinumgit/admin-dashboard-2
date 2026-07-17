@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
     display: grid;
-    grid-template: 1fr max-content / 2fr 8fr 3fr;
+    grid-template: 1fr max-content / 2fr 11fr;
     font-family: inter;
 }
 
@@ -192,7 +192,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-container {
     background-color: var(--header-white);
-    grid-column: span 2;
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
     align-items: center;
@@ -303,7 +302,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Main container div */
 
-.main-container {
+.main-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-container {
     background-color: var(--main-grey);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -312,7 +316,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 60px 15px 60px 40px;    
 }
 
-.main-container::before {
+.card-container::before {
     content: "Your Projects";
     position: absolute;
     font-size: 1.3rem;
@@ -323,7 +327,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card {
-    height: clamp(200px, 200px, 250px);
+    height: clamp(200px, 220px, 250px);
     background-color: var(--header-white);
     border-radius: 20px;
     padding: 20px 40px 0px 40px;
@@ -355,9 +359,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: inter;
     position: relative;
     padding: 60px 40px 60px 15px;    
+    display: grid;
+    height: 100%;
+    gap: 50px;
 }
 
-.announcements-div {
+.announcements-div, .trending-div {
     display: grid;
     grid-template-rows: 1fr max-content 1fr max-content 1fr; 
     background: var(--header-white);
@@ -368,13 +375,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .announcements-paragraph {
-    display: flex;
-    flex-direction: column;
     gap: 5px;
+    
 }
 
 .announcements-paragraph p {
     font-size: 0.8rem;
+    max-width: 60ch;
 }
 
 hr {
@@ -393,4 +400,14 @@ hr {
     top: 1rem;
     left: 1.7rem;
     font-weight: bold;
+}
+.trending-div::before {
+    content: "Trending";
+    position: absolute;
+    font-size: 1.3rem;
+    font-family: Roboto Mono;
+    left: 1.7rem;
+    font-weight: bold;
+    z-index: 2;
+    top: 25.5rem;
 }
